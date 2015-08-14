@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <title>JshSlider图片切换插件</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+  </head>
+
+  <body>
+    <!-- banner代码 开始 -->
+    <div id="playBox" class="playBox">
+      <div class="smalltitle">
+        <ul id="switchBtn">
+          <li class="item thistitle" ></li>
+          <li class="item" ></li>
+          <li class="item" ></li>
+          <li class="item"  ></li>
+        </ul>
+      </div>
+      <ul id="oUlplay" class="oUlplay" >
+        <li >
+          <img src="images/banner1.jpg" width="960"  height="400"/>
+        </li>
+        <li>
+          <img src="images/banner2.jpg" width="960"  height="400"/>
+        </li>
+        <li >
+          <img src="images/banner3.jpg" width="960"  height="400"/>
+        </li>
+        <li >
+          <img src="images/banner4.jpg" width="960"  height="400"/>
+        </li>
+      </ul>
+    </div>
+    <div class="playBoxBtn">
+      <div id="left"  style="cursor:pointer;float:left;width:480px;height:100px;background-color:red;color:white;text-align:center;font:bold 80px/100px 'Microsoft yahei'">
+        左
+      </div>
+      <div id="right"  style="cursor:pointer;float:left;width:480px;height:100px;background-color:blue;color:white;text-align:center;font:bold 80px/100px 'Microsoft yahei'">
+        右
+      </div>
+    </div>
+
+
+
+<div id="playBoxs" class="playBox">
+      <div class="pre"></div>
+      <div class="next"></div>
+      <div class="smalltitle">
+        <ul id="switchBtns">
+          <li class="item thistitle" ></li>
+          <li class="item" ></li>
+          <li class="item" ></li>
+          <li class="item"  ></li>
+        </ul>
+      </div>
+      <ul id="oUlplays" class="oUlplay" >
+        <li >
+          <img src="images/banner1.jpg" width="960"  height="400"/>
+        </li>
+        <li>
+          <img src="images/banner2.jpg" width="960"  height="400"/>
+        </li>
+        <li >
+          <img src="images/banner3.jpg" width="960"  height="400"/>
+        </li>
+        <li >
+          <img src="images/banner4.jpg" width="960"  height="400"/>
+        </li>
+      </ul>
+    </div>
+        <div class="playBoxBtn">
+      <div id="lefts" style="cursor:pointer;float:left;width:480px;height:100px;background-color:red;color:white;text-align:center;font:bold 80px/100px 'Microsoft yahei'">
+        左
+      </div>
+      <div id="rights"  style="cursor:pointer;float:left;width:480px;height:100px;background-color:blue;color:white;text-align:center;font:bold 80px/100px 'Microsoft yahei'">
+        右
+      </div>
+    </div>
+    
+    <!-- banner代码 结束 -->
+    <script src="js/jshSlider.js"></script>
+    <script>
+      JshSlider({
+        style: "left",
+        sliderBox: "#oUlplay > li",
+        switchBtn: ["#switchBtn > li", ".thistitle"],
+        animation: [30000, 700],
+        btnList: ["left","right"]
+      });
+
+	  JshSlider({
+        style: "top",
+        sliderBox: "#oUlplays > li",
+        switchBtn: ["#switchBtns > li", ".thistitle"],
+        animation: [3000, 700],
+        btnList: ["lefts","rights"]
+      });
+ 
+    </script>
+  </body>
+</html>
